@@ -232,5 +232,59 @@
 		</svg>
 		<figcaption>Adjusted scene (Step 3)</figcaption>
 	</figure>
+
+	<figure id="scene-grouped-figure">
+		<svg id="scene-grouped" viewBox="0 0 800 500" role="img" aria-labelledby="grouped-title grouped-desc">
+			<title id="grouped-title">Grouped windows house and garden scene</title>
+			<desc id="grouped-desc">The house and garden scene with both windows created from one reusable SVG group.</desc>
+
+			<!-- One group keeps the window shape and mullions consistent and reusable. -->
+			<defs>
+				<g id="window">
+					<rect x="0" y="0" width="35" height="30" fill="#9ddcf2" stroke="#4d6975" stroke-width="5" />
+					<line x1="17.5" y1="0" x2="17.5" y2="30" stroke="#4d6975" stroke-width="4" />
+					<line x1="0" y1="15" x2="35" y2="15" stroke="#4d6975" stroke-width="4" />
+				</g>
+			</defs>
+
+			<!-- Sky and grass -->
+			<rect x="0" y="0" width="800" height="350" fill="#b9e6ff" />
+			<rect x="0" y="350" width="800" height="150" fill="#84c878" />
+
+			<!-- Sun and cloud -->
+			<circle cx="690" cy="85" r="48" fill="#ffd166" stroke="#e09f1f" stroke-width="4" />
+			<ellipse cx="170" cy="105" rx="72" ry="28" fill="#ffffff" />
+			<circle cx="125" cy="104" r="28" fill="#ffffff" />
+			<circle cx="188" cy="91" r="35" fill="#ffffff" />
+
+			<!-- Tree -->
+			<rect x="92" y="245" width="34" height="125" fill="#8b5a2b" />
+			<circle cx="110" cy="205" r="64" fill="#3f9f57" />
+			<circle cx="65" cy="236" r="45" fill="#48ad5d" />
+			<circle cx="155" cy="237" r="48" fill="#48ad5d" />
+
+			<!-- House body, roof, and chimney -->
+			<rect x="270" y="245" width="300" height="180" fill="#f2b36d" stroke="#754c29" stroke-width="5" />
+			<polygon points="245,250 420,105 595,250" fill="#c95b48" stroke="#754c29" stroke-width="5" />
+			<rect x="485" y="145" width="42" height="82" fill="#8e5142" stroke="#754c29" stroke-width="5" />
+
+			<!-- Door and grouped windows -->
+			<rect x="382" y="320" width="76" height="105" fill="#73503c" stroke="#4d3528" stroke-width="4" />
+			<circle cx="443" cy="374" r="5" fill="#ffd166" />
+			<!-- These translations use the original window top-left coordinates. -->
+			<use href="#window" transform="translate(300, 285)" />
+			<use href="#window" transform="translate(474, 285)" />
+
+			<!-- Fence -->
+			<polyline points="15,390 15,335 45,335 45,390 75,390 75,335 105,335 105,390 135,390 135,335 165,335 165,390 195,390" fill="none" stroke="#8b5a2b" stroke-width="8" />
+			<line x1="0" y1="360" x2="210" y2="360" stroke="#8b5a2b" stroke-width="8" />
+
+			<!-- Curved garden path -->
+			<path d="M 420 425 C 420 450, 350 462, 300 500 L 530 500 C 500 462, 455 450, 458 425 Z" fill="#d8b27c" stroke="#aa8252" stroke-width="3" />
+
+			<text x="400" y="475" text-anchor="middle" font-size="22" fill="#254b2c">Welcome to our garden</text>
+		</svg>
+		<figcaption>Grouped windows scene (Step 4)</figcaption>
+	</figure>
 </body>
 </html>
